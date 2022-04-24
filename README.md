@@ -3,8 +3,9 @@
 This repository wil be used as a kanban board during the concurrent phases:
 - [Development phase](https://github.com/Hold-Krykke-BA/Bachelor-Project/projects/1) 
 - [Writing phase](https://github.com/Hold-Krykke-BA/Bachelor-Project/projects/2)  
+- [Presentation phase](https://github.com/Hold-Krykke-BA/Bachelor-Project/projects/3)
 
-The repositoty will additionally function as a container for the infrastructure configurations files and the source code for the CRM prototype. 
+The repositoty will additionally function as a container for the infrastructure configurations files. 
 
 ## Contributors
 - _[Rúni Vedel Niclasen - cph-rn118](https://github.com/Runi-VN)_
