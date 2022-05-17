@@ -1,6 +1,7 @@
 # README
 
 ## Todo
+- database replicas on "basic" subscription?
 - All todos
 - rename underscore names to dashed names
 - variables

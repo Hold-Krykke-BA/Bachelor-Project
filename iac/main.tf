@@ -14,14 +14,14 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rr_dev_rg" {
   name     = "rr_dev_rg"
-  location = "${var.location}"
+  location = var.location
 }
 
 resource "azurerm_app_service_plan" "rr_dev_sp" {
   name                = "rr_dev_sp"
   resource_group_name = azurerm_resource_group.rr_dev_rg.name
   location            = azurerm_resource_group.rr_dev_rg.location
-  
+
   sku {
     tier = "Standard"
     size = "S1"
@@ -71,7 +71,8 @@ resource "azurerm_public_ip" "rr_dev_agw_ip" {
   name                = "rr_dev_agw_ip"
   location            = azurerm_resource_group.rr_dev_rg.location
   resource_group_name = azurerm_resource_group.rr_dev_rg.name
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
+  sku                 = "Standard"
 }
 
 resource "azurerm_virtual_network" "rr_dev_vnet" {
@@ -112,8 +113,8 @@ resource "azurerm_application_gateway" "rr_dev_agw" {
   location            = azurerm_resource_group.rr_dev_rg.location
 
   sku {
-    name     = "Standard_Small"
-    tier     = "Standard"
+    name     = "Standard_v2"
+    tier     = "Standard_v2"
     capacity = 2
   }
 
@@ -156,6 +157,7 @@ resource "azurerm_application_gateway" "rr_dev_agw" {
   request_routing_rule {
     name                       = local.request_routing_rule_name
     rule_type                  = "Basic"
+    priority                   = 1
     http_listener_name         = local.listener_name
     backend_address_pool_name  = local.subnet2_address_pool_name
     backend_http_settings_name = local.http_setting_name
@@ -169,7 +171,7 @@ resource "azurerm_application_gateway" "rr_dev_agw" {
 
 resource "azurerm_kubernetes_cluster" "rr_dev_aks" {
   name                = "rr_dev_aks"
-  location            = azurerm_resource_group.rr_dev_rg.location
+  location            = "germanywestcentral" #azurerm_resource_group.rr_dev_rg.location
   resource_group_name = azurerm_resource_group.rr_dev_rg.name
   dns_prefix          = "rrdevaks"
 
@@ -177,7 +179,7 @@ resource "azurerm_kubernetes_cluster" "rr_dev_aks" {
   default_node_pool {
     name       = "default"
     node_count = 1
-    vm_size    = "Standard_D2_v2"
+    vm_size    = "standard_f2s_v2" #"Standard_D2_v2"
   }
 
   identity {
@@ -185,10 +187,10 @@ resource "azurerm_kubernetes_cluster" "rr_dev_aks" {
   }
 
   ingress_application_gateway {
-    gateway_id   = azurerm_application_gateway.rr_dev_agw.id
-    gateway_name = azurerm_application_gateway.rr_dev_agw.name
-    subnet_id    = azurerm_subnet.rr_dev_subnet1.id
-    subnet_cidr  = azurerm_subnet.rr_dev_subnet1.address_prefixes[0]
+    gateway_id = azurerm_application_gateway.rr_dev_agw.id
+    #gateway_name = azurerm_application_gateway.rr_dev_agw.name
+    #subnet_id    = azurerm_subnet.rr_dev_subnet1.id
+    #subnet_cidr  = azurerm_subnet.rr_dev_subnet1.address_prefixes[0]
   }
 }
 
@@ -261,7 +263,7 @@ resource "azurerm_storage_container" "rr-dev-sa1-blob" {
 resource "azurerm_mssql_server" "rr-dev-mssql-server" {
   name                         = "rr-dev-mssql-server"
   resource_group_name          = azurerm_resource_group.rr_dev_rg.name
-  location                     = "germanywestcentral"  # azurerm_resource_group.rr_dev_rg.location
+  location                     = "germanywestcentral" # azurerm_resource_group.rr_dev_rg.location
   version                      = "12.0"
   administrator_login          = "missadministrator" #todo variable
   administrator_login_password = "thisIsKat11"       #todo variable
@@ -272,7 +274,7 @@ resource "azurerm_mssql_server" "rr-dev-mssql-server" {
 resource "azurerm_mssql_elasticpool" "rr-dev-mssql-epool" {
   name                = "rr-dev-mssql-epool"
   resource_group_name = azurerm_resource_group.rr_dev_rg.name
-  location            = "germanywestcentral"# azurerm_resource_group.rr_dev_rg.location
+  location            = "germanywestcentral" # azurerm_resource_group.rr_dev_rg.location
   server_name         = azurerm_mssql_server.rr-dev-mssql-server.name
   license_type        = "LicenseIncluded"
   max_size_gb         = 500
@@ -295,9 +297,9 @@ resource "azurerm_mssql_database" "rr-dev-mssql-db" {
   server_id    = azurerm_mssql_server.rr-dev-mssql-server.id
   collation    = "SQL_Latin1_General_CP1_CI_AS"
   license_type = "LicenseIncluded"
-  max_size_gb  = 4
-#   read_scale   = true
-  sku_name     = "ElasticPool"
+  #   max_size_gb  = 4
+  #   read_scale   = true
+  sku_name = "ElasticPool"
   #   zone_redundant = true
   elastic_pool_id = azurerm_mssql_elasticpool.rr-dev-mssql-epool.id
 }
