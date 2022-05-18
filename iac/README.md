@@ -6,7 +6,7 @@ Writing setups as code brings a plethora of benefits with it, such as variables,
 
 This code is oriented around the *development* environment, but can be adapted to support as many as prefered.
 
-![A GIF of Terraform applying infrastructure to Azure](docs/terraformapplyplan.gif)
+![A GIF of Terraform applying infrastructure to Azure](docs/terraformapplyplan.gif)  
 *A GIF of Terraform applying the infrastructure as code in this project*
 
 ## Structure
@@ -49,7 +49,8 @@ Terraform allows the developer to plan their execution with `terraform plan`, of
 
 ### Dependency Graph
 The dependency graph and references between resources creates a self-documenting infrastructure setup. A rendered SVG of the graph created in DOT format can be found in [docs/graph.svg](docs/graph.svg) and seen here:  
-![An image of the DiGraph created by terraform graph](docs/graph.svg)
+![An image of the DiGraph created by terraform graph](docs/graph.svg)  
+_A full screen SVG can be found in the RAW file here: https://raw.githubusercontent.com/Hold-Krykke-BA/Bachelor-Project/main/iac/docs/graph.svg_
 
 ### Deploying infrastructure
 Using `terraform apply`, new infrastructure can be added or changes and replacements can be made to existing resources.
