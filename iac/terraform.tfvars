@@ -1,1 +1,6 @@
-location = "ukwest"
+rg_name        = "rr-dev-rg"
+location       = "ukwest"
+sql_location   = "germanywestcentral"
+aks_location   = "germanywestcentral"
+mssql_username = "missadministrator"
+mssql_password = "thisIsKat11"

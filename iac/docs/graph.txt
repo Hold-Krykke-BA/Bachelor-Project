@@ -1,0 +1,52 @@
+digraph {
+        compound = "true"
+        newrank = "true"
+        subgraph "root" {
+                "[root] azurerm_resource_group.rr-dev-rg (expand)" [label = "azurerm_resource_group.rr-dev-rg", shape = "box"]
+                "[root] module.network.azurerm_application_gateway.rr-dev-agw (expand)" [label = "module.network.azurerm_application_gateway.rr-dev-agw", shape = "box"]
+                "[root] module.network.azurerm_lb.rr-dev-lb (expand)" [label = "module.network.azurerm_lb.rr-dev-lb", shape = "box"]
+                "[root] module.network.azurerm_public_ip.rr-dev-agw-ip (expand)" [label = "module.network.azurerm_public_ip.rr-dev-agw-ip", shape = "box"]
+                "[root] module.network.azurerm_public_ip.rr-dev-lb-ip (expand)" [label = "module.network.azurerm_public_ip.rr-dev-lb-ip", shape = "box"]
+                "[root] module.network.azurerm_subnet.rr-dev-subnet1 (expand)" [label = "module.network.azurerm_subnet.rr-dev-subnet1", shape = "box"]
+                "[root] module.network.azurerm_subnet.rr-dev-subnet2 (expand)" [label = "module.network.azurerm_subnet.rr-dev-subnet2", shape = "box"]
+                "[root] module.network.azurerm_virtual_network.rr-dev-vnet (expand)" [label = "module.network.azurerm_virtual_network.rr-dev-vnet", shape = "box"]
+                "[root] module.services.azurerm_app_service_plan.rr-dev-asp (expand)" [label = "module.services.azurerm_app_service_plan.rr-dev-asp", shape = "box"]
+                "[root] module.services.azurerm_kubernetes_cluster.rr-dev-aks (expand)" [label = "module.services.azurerm_kubernetes_cluster.rr-dev-aks", shape = "box"]
+                "[root] module.services.azurerm_servicebus_namespace.rr-dev-bus (expand)" [label = "module.services.azurerm_servicebus_namespace.rr-dev-bus", shape = "box"]
+                "[root] module.services.azurerm_servicebus_queue.rr-dev-bus-queue (expand)" [label = "module.services.azurerm_servicebus_queue.rr-dev-bus-queue", shape = "box"]
+                "[root] module.services.azurerm_servicebus_topic.rr-dev-bus-topic (expand)" [label = "module.services.azurerm_servicebus_topic.rr-dev-bus-topic", shape = "box"]
+                "[root] module.services.azurerm_windows_function_app.rr-dev-fna-jobs (expand)" [label = "module.services.azurerm_windows_function_app.rr-dev-fna-jobs", shape = "box"]
+                "[root] module.services.azurerm_windows_web_app.rr-dev-web-app (expand)" [label = "module.services.azurerm_windows_web_app.rr-dev-web-app", shape = "box"]
+                "[root] module.storage.azurerm_mssql_database.rr-dev-mssql-db (expand)" [label = "module.storage.azurerm_mssql_database.rr-dev-mssql-db", shape = "box"]
+                "[root] module.storage.azurerm_mssql_elasticpool.rr-dev-mssql-epool (expand)" [label = "module.storage.azurerm_mssql_elasticpool.rr-dev-mssql-epool", shape = "box"]
+                "[root] module.storage.azurerm_mssql_server.rr-dev-mssql-server (expand)" [label = "module.storage.azurerm_mssql_server.rr-dev-mssql-server", shape = "box"]
+                "[root] module.storage.azurerm_storage_account.rr0dev0sa1 (expand)" [label = "module.storage.azurerm_storage_account.rr0dev0sa1", shape = "box"]
+                "[root] module.storage.azurerm_storage_container.rr-dev-sa1-blob (expand)" [label = "module.storage.azurerm_storage_container.rr-dev-sa1-blob", shape = "box"]
+                "[root] azurerm_resource_group.rr-dev-rg (expand)" -> "[root] module.network (close)"
+                "[root] azurerm_resource_group.rr-dev-rg (expand)" -> "[root] module.storage (close)"
+                "[root] azurerm_resource_group.rr-dev-rg (expand)" -> "[root] module.services (close)"
+                "[root] module.network (close)" -> "[root] module.network.azurerm_lb.rr-dev-lb (expand)"
+                "[root] module.network (close)" -> "[root] module.network.azurerm_subnet.rr-dev-subnet2 (expand)"
+                
+                "[root] module.network.azurerm_application_gateway.rr-dev-agw (expand)" -> "[root] module.network.azurerm_public_ip.rr-dev-agw-ip (expand)"
+                "[root] module.network.azurerm_application_gateway.rr-dev-agw (expand)" -> "[root] module.network.azurerm_subnet.rr-dev-subnet1 (expand)"
+                "[root] module.network (close)" -> "[root] module.network.azurerm_application_gateway.rr-dev-agw (expand)"
+                "[root] module.network.azurerm_lb.rr-dev-lb (expand)" -> "[root] module.network.azurerm_public_ip.rr-dev-lb-ip (expand)"
+                "[root] module.network.azurerm_subnet.rr-dev-subnet1 (expand)" -> "[root] module.network.azurerm_virtual_network.rr-dev-vnet (expand)"
+                "[root] module.network.azurerm_subnet.rr-dev-subnet2 (expand)" -> "[root] module.network.azurerm_virtual_network.rr-dev-vnet (expand)"
+                "[root] module.services (close)" -> "[root] module.services.azurerm_kubernetes_cluster.rr-dev-aks (expand)"
+                "[root] module.services (close)" -> "[root] module.services.azurerm_servicebus_queue.rr-dev-bus-queue (expand)"
+                "[root] module.services (close)" -> "[root] module.services.azurerm_servicebus_topic.rr-dev-bus-topic (expand)"
+                "[root] module.services (close)" -> "[root] module.services.azurerm_windows_function_app.rr-dev-fna-jobs (expand)"
+                "[root] module.services (close)" -> "[root] module.services.azurerm_windows_web_app.rr-dev-web-app (expand)"
+                "[root] module.services.azurerm_servicebus_queue.rr-dev-bus-queue (expand)" -> "[root] module.services.azurerm_servicebus_namespace.rr-dev-bus (expand)"
+                "[root] module.services.azurerm_servicebus_topic.rr-dev-bus-topic (expand)" -> "[root] module.services.azurerm_servicebus_namespace.rr-dev-bus (expand)"
+                "[root] module.services.azurerm_windows_function_app.rr-dev-fna-jobs (expand)" -> "[root] module.services.azurerm_app_service_plan.rr-dev-asp (expand)"
+                "[root] module.services.azurerm_windows_web_app.rr-dev-web-app (expand)" -> "[root] module.services.azurerm_app_service_plan.rr-dev-asp (expand)"
+                "[root] module.storage (close)" -> "[root] module.storage.azurerm_mssql_database.rr-dev-mssql-db (expand)"
+                "[root] module.storage (close)" -> "[root] module.storage.azurerm_storage_container.rr-dev-sa1-blob (expand)"
+                "[root] module.storage.azurerm_mssql_database.rr-dev-mssql-db (expand)" -> "[root] module.storage.azurerm_mssql_elasticpool.rr-dev-mssql-epool (expand)"
+                "[root] module.storage.azurerm_mssql_elasticpool.rr-dev-mssql-epool (expand)" -> "[root] module.storage.azurerm_mssql_server.rr-dev-mssql-server (expand)"
+                "[root] module.storage.azurerm_storage_container.rr-dev-sa1-blob (expand)" -> "[root] module.storage.azurerm_storage_account.rr0dev0sa1 (expand)"
+        }
+}

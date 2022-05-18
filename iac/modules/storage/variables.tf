@@ -13,11 +13,6 @@ variable "sql_location" {
   type        = string
 }
 
-variable "aks_location" {
-  description = "Alternative location for AKS due to quotas"
-  type        = string
-}
-
 variable "mssql_username" {
   description = "Username for login to the MSSQL server"
   sensitive   = true
