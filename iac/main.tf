@@ -1,4 +1,3 @@
-# Configure the Azure provider
 terraform {
   required_providers {
     azurerm = {
@@ -36,16 +35,6 @@ resource "azurerm_windows_web_app" "rr_dev_web_app" {
 
   site_config {}
 }
-
-# resource "azurerm_api_management" "rr_dev_api_mgmt" {
-#   name                = "rr_dev_api_mgmt"
-#   location            = azurerm_resource_group.rr_dev_rg.location
-#   resource_group_name = azurerm_resource_group.rr_dev_rg.name
-#   publisher_name      = "Rights and Royalty"
-#   publisher_email     = "bachelor.holdkrykke@gmail.com"
-
-#   sku_name = "Developer_1"
-# }
 
 resource "azurerm_public_ip" "rr_dev_lb_ip" {
   name                = "rr_dev_lb_ip"
@@ -164,17 +153,13 @@ resource "azurerm_application_gateway" "rr_dev_agw" {
   }
 }
 
-
 ###########################
-
-
 
 resource "azurerm_kubernetes_cluster" "rr_dev_aks" {
   name                = "rr_dev_aks"
   location            = "germanywestcentral" #azurerm_resource_group.rr_dev_rg.location
   resource_group_name = azurerm_resource_group.rr_dev_rg.name
   dns_prefix          = "rrdevaks"
-
 
   default_node_pool {
     name       = "default"
@@ -188,9 +173,6 @@ resource "azurerm_kubernetes_cluster" "rr_dev_aks" {
 
   ingress_application_gateway {
     gateway_id = azurerm_application_gateway.rr_dev_agw.id
-    #gateway_name = azurerm_application_gateway.rr_dev_agw.name
-    #subnet_id    = azurerm_subnet.rr_dev_subnet1.id
-    #subnet_cidr  = azurerm_subnet.rr_dev_subnet1.address_prefixes[0]
   }
 }
 
@@ -218,7 +200,6 @@ resource "azurerm_servicebus_topic" "rr_dev_bus_topic" {
 
 ########################
 
-
 resource "azurerm_storage_account" "rr0dev0sa1" {
   name                     = "rr0dev0sa1"
   resource_group_name      = azurerm_resource_group.rr_dev_rg.name
@@ -226,17 +207,6 @@ resource "azurerm_storage_account" "rr0dev0sa1" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
-
-# resource "azurerm_app_service_plan" "rr_dev_asp" {
-#   name                = "azure-functions-test-service-plan"
-#   location            = azurerm_resource_group.rr_dev_rg.location
-#   resource_group_name = azurerm_resource_group.rr_dev_rg.name
-
-#   sku {
-#     tier = "Standard"
-#     size = "S1"
-#   }
-# }
 
 resource "azurerm_windows_function_app" "rr-dev-fna-jobs" {
   name                       = "rr-dev-fna-jobs"
@@ -303,4 +273,3 @@ resource "azurerm_mssql_database" "rr-dev-mssql-db" {
   #   zone_redundant = true
   elastic_pool_id = azurerm_mssql_elasticpool.rr-dev-mssql-epool.id
 }
-
