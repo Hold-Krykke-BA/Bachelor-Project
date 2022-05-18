@@ -64,6 +64,13 @@ Which leads to the following result:
 ### Destroying infrastructure
 Resources managed by Terraform can be torn down with `terraform destroy`.
 
+### Verifying code
+Terraform allows code formatting according to specification with the `terraform fmt` command and code validation with the `terraform validation` command.
+
+Terraform has built-in validation when applying code - to a certain degree. It will check for spelling and errors, and may catch invalid resource configuration before execution. Additionally it will also validate during execution against the Cloud Provider's API (In this case Azure), and return any errors it experiences.
+
+Finally, third party linters can provide static analysis, ensuring the use of common standards and that typical errors will not occur. In this project we have added [tflint](https://github.com/terraform-linters/tflint) and extended it with the Azure ruleset, as can be seen in the configuration file [.tflint.hcl](./.tflint.hcl).
+
 ## What's next?
 Terraform should not exist entirely on its own, as it is built for managing infrastructure, but not for managing the software on the infrastructure.
 Often, Terraform is included as a part of a Continuous Integration/Continuous Delivery pipeline, as to manage the infrastructure, before the pipeline then deploys software onto it.
