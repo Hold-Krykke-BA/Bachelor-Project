@@ -45,7 +45,7 @@ The code in this project allows us to deploy 26 resources on the Microsoft Azure
 ```
 
 ### Planned execution
-Terraform allows the developer to plan their execution with `terraform plan`, of which the output can be seen in [docs/terraformplan.json](./docs/terraformplan.json).
+Terraform allows the developer to plan their execution with `terraform plan`, of which the output can be seen in [docs/terraformplan.json](./docs/terraformplan.json). This ensures the developer performs the exact infrastructure changes they expect.
 
 ### Dependency Graph
 The dependency graph and references between resources creates a self-documenting infrastructure setup. A rendered SVG of the graph created in DOT format can be found in [docs/graph.svg](docs/graph.svg) and seen here:  
@@ -54,7 +54,11 @@ The dependency graph and references between resources creates a self-documenting
 ### Deploying infrastructure
 Using `terraform apply`, new infrastructure can be added or changes and replacements can be made to existing resources.
 
-![An image of the console output of terraform apply](docs/terraformapply.png)
+![An image of the console output of terraform apply](docs/terraformapply.png)  
+
+Which leads to the following result:  
+
+![An image of the result of terraform apply, 20 resources created](docs/terraformapplycomplete.png)  
 
 ### Destroying infrastructure
 Resources managed by Terraform can be torn down with `terraform destroy`.
