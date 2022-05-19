@@ -43,9 +43,6 @@ The code in this project allows us to deploy 26 resources on the Microsoft Azure
 testtesttesttest
 ![github](https://user-images.githubusercontent.com/35559774/169312435-226df750-afbe-4ebb-98ca-0973ec51fa09.png)
 
-testtest
-![test](https://raw.githubusercontent.com/Hold-Krykke-BA/Bachelor-Project/main/iac/github.png?raw=true)
-
 ![An image of the deployed Azure resources](docs/azuredev.png)  
 *The above image shows a collection of the resources deployed on Azure.*  
 
