@@ -40,10 +40,7 @@ This code is oriented around the *development* environment, but can be adapted t
 ## Results
 The code in this project allows us to deploy 26 resources on the Microsoft Azure Cloud Platform, including network, storage, a Kubernetes cluster and several services, in less than 10 minutes. At the same time, we can use features of Terraform to plan, document, replace and destroy the same resource setups.
 
-testtesttesttest
-![github](https://user-images.githubusercontent.com/35559774/169312435-226df750-afbe-4ebb-98ca-0973ec51fa09.png)
-
-![An image of the deployed Azure resources](docs/azuredev.png)  
+![An image of the deployed Azure resources](https://user-images.githubusercontent.com/35559774/169312435-226df750-afbe-4ebb-98ca-0973ec51fa09.png)
 *The above image shows a collection of the resources deployed on Azure.*  
 
 ![An image of the Kubernetes cluster deployed on Azure](docs/azurekubernetes.png)
