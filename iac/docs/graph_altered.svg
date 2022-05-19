@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1096pt" height="332pt" viewBox="0.00 0.00 1095.78 332.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 328)">
+<title>%0</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-328 1091.7823,-328 1091.7823,4 -4,4"/>
+<!-- [root] resource_group (expand) -->
+<g id="node1" class="node">
+<title>[root] resource_group (expand)</title>
+<polygon fill="none" stroke="#000000" points="576.0846,-324 472.9442,-324 472.9442,-288 576.0846,-288 576.0846,-324"/>
+<text text-anchor="middle" x="524.5144" y="-301.8" font-family="Times,serif" font-size="14.00" fill="#000000">resource_group</text>
+</g>
+<!-- module.network -->
+<g id="node21" class="node">
+<title>module.network</title>
+<ellipse fill="none" stroke="#000000" cx="323.5144" cy="-234" rx="74.1213" ry="18"/>
+<text text-anchor="middle" x="323.5144" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">module.network</text>
+</g>
+<!-- [root] resource_group (expand)&#45;&gt;module.network -->
+<g id="edge1" class="edge">
+<title>[root] resource_group (expand)-&gt;module.network</title>
+<path fill="none" stroke="#000000" d="M474.0531,-287.9243C443.7275,-277.0614 405.241,-263.2752 374.7738,-252.3616"/>
+<polygon fill="#000000" stroke="#000000" points="375.7787,-249.0038 365.1841,-248.9265 373.4181,-255.5938 375.7787,-249.0038"/>
+</g>
+<!-- module.storage -->
+<g id="node22" class="node">
+<title>module.storage</title>
+<ellipse fill="none" stroke="#000000" cx="524.5144" cy="-234" rx="70.1068" ry="18"/>
+<text text-anchor="middle" x="524.5144" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">module.storage</text>
+</g>
+<!-- [root] resource_group (expand)&#45;&gt;module.storage -->
+<g id="edge2" class="edge">
+<title>[root] resource_group (expand)-&gt;module.storage</title>
+<path fill="none" stroke="#000000" d="M524.5144,-287.8314C524.5144,-280.131 524.5144,-270.9743 524.5144,-262.4166"/>
+<polygon fill="#000000" stroke="#000000" points="528.0145,-262.4132 524.5144,-252.4133 521.0145,-262.4133 528.0145,-262.4132"/>
+</g>
+<!-- module.services -->
+<g id="node23" class="node">
+<title>module.services</title>
+<ellipse fill="none" stroke="#000000" cx="832.5144" cy="-234" rx="73.5339" ry="18"/>
+<text text-anchor="middle" x="832.5144" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">module.services</text>
+</g>
+<!-- [root] resource_group (expand)&#45;&gt;module.services -->
+<g id="edge3" class="edge">
+<title>[root] resource_group (expand)-&gt;module.services</title>
+<path fill="none" stroke="#000000" d="M576.0667,-293.9488C629.2168,-281.5241 712.163,-262.1341 769.2513,-248.7888"/>
+<polygon fill="#000000" stroke="#000000" points="770.3018,-252.1376 779.2426,-246.4532 768.7084,-245.3214 770.3018,-252.1376"/>
+</g>
+<!-- [root] application_gateway (expand) -->
+<g id="node2" class="node">
+<title>[root] application_gateway (expand)</title>
+<polygon fill="none" stroke="#000000" points="225.3617,-180 93.6671,-180 93.6671,-144 225.3617,-144 225.3617,-180"/>
+<text text-anchor="middle" x="159.5144" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">application_gateway</text>
+</g>
+<!-- [root] public_ip (agw) (expand) -->
+<g id="node4" class="node">
+<title>[root] public_ip (agw) (expand)</title>
+<polygon fill="none" stroke="#000000" points="105.0432,-108 -.0144,-108 -.0144,-72 105.0432,-72 105.0432,-108"/>
+<text text-anchor="middle" x="52.5144" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">public_ip (agw)</text>
+</g>
+<!-- [root] application_gateway (expand)&#45;&gt;[root] public_ip (agw) (expand) -->
+<g id="edge6" class="edge">
+<title>[root] application_gateway (expand)-&gt;[root] public_ip (agw) (expand)</title>
+<path fill="none" stroke="#000000" d="M132.5138,-143.8314C119.0813,-134.7927 102.6671,-123.7476 88.2105,-114.0198"/>
+<polygon fill="#000000" stroke="#000000" points="89.7569,-110.8418 79.5064,-108.1628 85.849,-116.6494 89.7569,-110.8418"/>
+</g>
+<!-- [root] subnet (1) (expand) -->
+<g id="node6" class="node">
+<title>[root] subnet (1) (expand)</title>
+<polygon fill="none" stroke="#000000" points="195.8864,-108 123.1424,-108 123.1424,-72 195.8864,-72 195.8864,-108"/>
+<text text-anchor="middle" x="159.5144" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">subnet (1)</text>
+</g>
+<!-- [root] application_gateway (expand)&#45;&gt;[root] subnet (1) (expand) -->
+<g id="edge7" class="edge">
+<title>[root] application_gateway (expand)-&gt;[root] subnet (1) (expand)</title>
+<path fill="none" stroke="#000000" d="M159.5144,-143.8314C159.5144,-136.131 159.5144,-126.9743 159.5144,-118.4166"/>
+<polygon fill="#000000" stroke="#000000" points="163.0145,-118.4132 159.5144,-108.4133 156.0145,-118.4133 163.0145,-118.4132"/>
+</g>
+<!-- [root] loadbalancer (expand) -->
+<g id="node3" class="node">
+<title>[root] loadbalancer (expand)</title>
+<polygon fill="none" stroke="#000000" points="331.0305,-180 243.9983,-180 243.9983,-144 331.0305,-144 331.0305,-180"/>
+<text text-anchor="middle" x="287.5144" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">loadbalancer</text>
+</g>
+<!-- [root] public_ip (lb) (expand) -->
+<g id="node5" class="node">
+<title>[root] public_ip (lb) (expand)</title>
+<polygon fill="none" stroke="#000000" points="305.6135,-108 213.4153,-108 213.4153,-72 305.6135,-72 305.6135,-108"/>
+<text text-anchor="middle" x="259.5144" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">public_ip (lb)</text>
+</g>
+<!-- [root] loadbalancer (expand)&#45;&gt;[root] public_ip (lb) (expand) -->
+<g id="edge9" class="edge">
+<title>[root] loadbalancer (expand)-&gt;[root] public_ip (lb) (expand)</title>
+<path fill="none" stroke="#000000" d="M280.4488,-143.8314C277.3884,-135.9617 273.7365,-126.5712 270.3462,-117.8533"/>
+<polygon fill="#000000" stroke="#000000" points="273.5617,-116.4647 266.6751,-108.4133 267.0376,-119.0019 273.5617,-116.4647"/>
+</g>
+<!-- [root] virtual_network (expand) -->
+<g id="node8" class="node">
+<title>[root] virtual_network (expand)</title>
+<polygon fill="none" stroke="#000000" points="310.4346,-36 204.5942,-36 204.5942,0 310.4346,0 310.4346,-36"/>
+<text text-anchor="middle" x="257.5144" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">virtual_network</text>
+</g>
+<!-- [root] subnet (1) (expand)&#45;&gt;[root] virtual_network (expand) -->
+<g id="edge10" class="edge">
+<title>[root] subnet (1) (expand)-&gt;[root] virtual_network (expand)</title>
+<path fill="none" stroke="#000000" d="M184.2439,-71.8314C196.4306,-62.8779 211.2967,-51.9558 224.4456,-42.2955"/>
+<polygon fill="#000000" stroke="#000000" points="226.8062,-44.9042 232.7928,-36.1628 222.6617,-39.263 226.8062,-44.9042"/>
+</g>
+<!-- [root] subnet (2) (expand) -->
+<g id="node7" class="node">
+<title>[root] subnet (2) (expand)</title>
+<polygon fill="none" stroke="#000000" points="395.8864,-108 323.1424,-108 323.1424,-72 395.8864,-72 395.8864,-108"/>
+<text text-anchor="middle" x="359.5144" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">subnet (2)</text>
+</g>
+<!-- [root] subnet (2) (expand)&#45;&gt;[root] virtual_network (expand) -->
+<g id="edge11" class="edge">
+<title>[root] subnet (2) (expand)-&gt;[root] virtual_network (expand)</title>
+<path fill="none" stroke="#000000" d="M333.7755,-71.8314C320.9707,-62.7927 305.3235,-51.7476 291.5425,-42.0198"/>
+<polygon fill="#000000" stroke="#000000" points="293.4332,-39.0703 283.2451,-36.1628 289.3964,-44.7891 293.4332,-39.0703"/>
+</g>
+<!-- [root] app_service_plan (expand) -->
+<g id="node9" class="node">
+<title>[root] app_service_plan (expand)</title>
+<polygon fill="none" stroke="#000000" points="1026.4738,-108 912.555,-108 912.555,-72 1026.4738,-72 1026.4738,-108"/>
+<text text-anchor="middle" x="969.5144" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">app_service_plan</text>
+</g>
+<!-- [root] kubernetes (expand) -->
+<g id="node10" class="node">
+<title>[root] kubernetes (expand)</title>
+<polygon fill="none" stroke="#000000" points="751.6548,-180 675.374,-180 675.374,-144 751.6548,-144 751.6548,-180"/>
+<text text-anchor="middle" x="713.5144" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">kubernetes</text>
+</g>
+<!-- [root] servicebus (expand) -->
+<g id="node11" class="node">
+<title>[root] servicebus (expand)</title>
+<polygon fill="none" stroke="#000000" points="864.0986,-108 788.9302,-108 788.9302,-72 864.0986,-72 864.0986,-108"/>
+<text text-anchor="middle" x="826.5144" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">servicebus</text>
+</g>
+<!-- [root] queue (expand) -->
+<g id="node12" class="node">
+<title>[root] queue (expand)</title>
+<polygon fill="none" stroke="#000000" points="823.5144,-180 769.5144,-180 769.5144,-144 823.5144,-144 823.5144,-180"/>
+<text text-anchor="middle" x="796.5144" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">queue</text>
+</g>
+<!-- [root] queue (expand)&#45;&gt;[root] servicebus (expand) -->
+<g id="edge17" class="edge">
+<title>[root] queue (expand)-&gt;[root] servicebus (expand)</title>
+<path fill="none" stroke="#000000" d="M804.0847,-143.8314C807.3637,-135.9617 811.2764,-126.5712 814.9089,-117.8533"/>
+<polygon fill="#000000" stroke="#000000" points="818.2268,-118.9902 818.8422,-108.4133 811.7652,-116.2979 818.2268,-118.9902"/>
+</g>
+<!-- [root] topic (expand) -->
+<g id="node13" class="node">
+<title>[root] topic (expand)</title>
+<polygon fill="none" stroke="#000000" points="895.5144,-180 841.5144,-180 841.5144,-144 895.5144,-144 895.5144,-180"/>
+<text text-anchor="middle" x="868.5144" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">topic</text>
+</g>
+<!-- [root] topic (expand)&#45;&gt;[root] servicebus (expand) -->
+<g id="edge18" class="edge">
+<title>[root] topic (expand)-&gt;[root] servicebus (expand)</title>
+<path fill="none" stroke="#000000" d="M857.916,-143.8314C853.2267,-135.7925 847.6116,-126.1666 842.4346,-117.2918"/>
+<polygon fill="#000000" stroke="#000000" points="845.3175,-115.2875 837.2555,-108.4133 839.271,-118.8146 845.3175,-115.2875"/>
+</g>
+<!-- [root] function_app (expand) -->
+<g id="node14" class="node">
+<title>[root] function_app (expand)</title>
+<polygon fill="none" stroke="#000000" points="1003.3855,-180 913.6433,-180 913.6433,-144 1003.3855,-144 1003.3855,-180"/>
+<text text-anchor="middle" x="958.5144" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">function_app</text>
+</g>
+<!-- [root] function_app (expand)&#45;&gt;[root] app_service_plan (expand) -->
+<g id="edge19" class="edge">
+<title>[root] function_app (expand)-&gt;[root] app_service_plan (expand)</title>
+<path fill="none" stroke="#000000" d="M961.2902,-143.8314C962.4666,-136.131 963.8655,-126.9743 965.173,-118.4166"/>
+<polygon fill="#000000" stroke="#000000" points="968.6508,-118.8272 966.7013,-108.4133 961.7311,-117.7699 968.6508,-118.8272"/>
+</g>
+<!-- [root] web_app (expand) -->
+<g id="node15" class="node">
+<title>[root] web_app (expand)</title>
+<polygon fill="none" stroke="#000000" points="1087.5518,-180 1021.477,-180 1021.477,-144 1087.5518,-144 1087.5518,-180"/>
+<text text-anchor="middle" x="1054.5144" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">web_app</text>
+</g>
+<!-- [root] web_app (expand)&#45;&gt;[root] app_service_plan (expand) -->
+<g id="edge20" class="edge">
+<title>[root] web_app (expand)-&gt;[root] app_service_plan (expand)</title>
+<path fill="none" stroke="#000000" d="M1033.0653,-143.8314C1022.6966,-135.0485 1010.0915,-124.3712 998.8498,-114.8489"/>
+<polygon fill="#000000" stroke="#000000" points="1000.8493,-111.9556 990.9566,-108.1628 996.3249,-117.297 1000.8493,-111.9556"/>
+</g>
+<!-- [root] mssql_database (expand) -->
+<g id="node16" class="node">
+<title>[root] mssql_database (expand)</title>
+<polygon fill="none" stroke="#000000" points="523.3785,-180 419.6503,-180 419.6503,-144 523.3785,-144 523.3785,-180"/>
+<text text-anchor="middle" x="471.5144" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">mssql_database</text>
+</g>
+<!-- [root] mssql_elasticpool (expand) -->
+<g id="node17" class="node">
+<title>[root] mssql_elasticpool (expand)</title>
+<polygon fill="none" stroke="#000000" points="529.836,-108 413.1928,-108 413.1928,-72 529.836,-72 529.836,-108"/>
+<text text-anchor="middle" x="471.5144" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">mssql_elasticpool</text>
+</g>
+<!-- [root] mssql_database (expand)&#45;&gt;[root] mssql_elasticpool (expand) -->
+<g id="edge23" class="edge">
+<title>[root] mssql_database (expand)-&gt;[root] mssql_elasticpool (expand)</title>
+<path fill="none" stroke="#000000" d="M471.5144,-143.8314C471.5144,-136.131 471.5144,-126.9743 471.5144,-118.4166"/>
+<polygon fill="#000000" stroke="#000000" points="475.0145,-118.4132 471.5144,-108.4133 468.0145,-118.4133 475.0145,-118.4132"/>
+</g>
+<!-- [root] mssql_server (expand) -->
+<g id="node18" class="node">
+<title>[root] mssql_server (expand)</title>
+<polygon fill="none" stroke="#000000" points="516.3799,-36 426.6489,-36 426.6489,0 516.3799,0 516.3799,-36"/>
+<text text-anchor="middle" x="471.5144" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000">mssql_server</text>
+</g>
+<!-- [root] mssql_elasticpool (expand)&#45;&gt;[root] mssql_server (expand) -->
+<g id="edge24" class="edge">
+<title>[root] mssql_elasticpool (expand)-&gt;[root] mssql_server (expand)</title>
+<path fill="none" stroke="#000000" d="M471.5144,-71.8314C471.5144,-64.131 471.5144,-54.9743 471.5144,-46.4166"/>
+<polygon fill="#000000" stroke="#000000" points="475.0145,-46.4132 471.5144,-36.4133 468.0145,-46.4133 475.0145,-46.4132"/>
+</g>
+<!-- [root] storage_account (expand) -->
+<g id="node19" class="node">
+<title>[root] storage_account (expand)</title>
+<polygon fill="none" stroke="#000000" points="654.9738,-108 548.055,-108 548.055,-72 654.9738,-72 654.9738,-108"/>
+<text text-anchor="middle" x="601.5144" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000">storage_account</text>
+</g>
+<!-- [root] storage_container (expand) -->
+<g id="node20" class="node">
+<title>[root] storage_container (expand)</title>
+<polygon fill="none" stroke="#000000" points="657.026,-180 542.0028,-180 542.0028,-144 657.026,-144 657.026,-180"/>
+<text text-anchor="middle" x="599.5144" y="-157.8" font-family="Times,serif" font-size="14.00" fill="#000000">storage_container</text>
+</g>
+<!-- [root] storage_container (expand)&#45;&gt;[root] storage_account (expand) -->
+<g id="edge25" class="edge">
+<title>[root] storage_container (expand)-&gt;[root] storage_account (expand)</title>
+<path fill="none" stroke="#000000" d="M600.0191,-143.8314C600.233,-136.131 600.4873,-126.9743 600.725,-118.4166"/>
+<polygon fill="#000000" stroke="#000000" points="604.2238,-118.5066 601.0029,-108.4133 597.2265,-118.3122 604.2238,-118.5066"/>
+</g>
+<!-- module.network&#45;&gt;[root] application_gateway (expand) -->
+<g id="edge8" class="edge">
+<title>module.network-&gt;[root] application_gateway (expand)</title>
+<path fill="none" stroke="#000000" d="M287.5239,-218.1993C264.7825,-208.2153 235.0606,-195.1666 209.9811,-184.1561"/>
+<polygon fill="#000000" stroke="#000000" points="211.1842,-180.8619 200.6208,-180.0467 208.3702,-187.2714 211.1842,-180.8619"/>
+</g>
+<!-- module.network&#45;&gt;[root] loadbalancer (expand) -->
+<g id="edge4" class="edge">
+<title>module.network-&gt;[root] loadbalancer (expand)</title>
+<path fill="none" stroke="#000000" d="M314.4301,-215.8314C310.4529,-207.8771 305.6989,-198.369 301.3005,-189.5723"/>
+<polygon fill="#000000" stroke="#000000" points="304.3237,-187.7923 296.721,-180.4133 298.0627,-190.9228 304.3237,-187.7923"/>
+</g>
+<!-- module.network&#45;&gt;[root] subnet (2) (expand) -->
+<g id="edge5" class="edge">
+<title>module.network-&gt;[root] subnet (2) (expand)</title>
+<path fill="none" stroke="#000000" d="M329.7828,-215.6343C333.205,-205.2474 337.3723,-191.9788 340.5144,-180 345.9083,-159.4364 350.8303,-135.9219 354.3126,-118.0864"/>
+<polygon fill="#000000" stroke="#000000" points="357.7912,-118.5303 356.2376,-108.0499 350.9165,-117.2116 357.7912,-118.5303"/>
+</g>
+<!-- module.storage&#45;&gt;[root] mssql_database (expand) -->
+<g id="edge21" class="edge">
+<title>module.storage-&gt;[root] mssql_database (expand)</title>
+<path fill="none" stroke="#000000" d="M511.4133,-216.2022C505.2173,-207.7851 497.6953,-197.5665 490.8597,-188.2805"/>
+<polygon fill="#000000" stroke="#000000" points="493.5798,-186.0716 484.8329,-180.0931 487.9425,-190.2214 493.5798,-186.0716"/>
+</g>
+<!-- module.storage&#45;&gt;[root] storage_container (expand) -->
+<g id="edge22" class="edge">
+<title>module.storage-&gt;[root] storage_container (expand)</title>
+<path fill="none" stroke="#000000" d="M542.6698,-216.5708C551.8592,-207.749 563.1827,-196.8784 573.2983,-187.1674"/>
+<polygon fill="#000000" stroke="#000000" points="575.9529,-189.4708 580.7429,-180.0206 571.1052,-184.4211 575.9529,-189.4708"/>
+</g>
+<!-- module.services&#45;&gt;[root] kubernetes (expand) -->
+<g id="edge12" class="edge">
+<title>module.services-&gt;[root] kubernetes (expand)</title>
+<path fill="none" stroke="#000000" d="M804.9143,-217.3008C789.2449,-207.8201 769.3847,-195.8039 752.183,-185.3962"/>
+<polygon fill="#000000" stroke="#000000" points="753.834,-182.3043 743.4663,-180.1222 750.2103,-188.2934 753.834,-182.3043"/>
+</g>
+<!-- module.services&#45;&gt;[root] queue (expand) -->
+<g id="edge13" class="edge">
+<title>module.services-&gt;[root] queue (expand)</title>
+<path fill="none" stroke="#000000" d="M823.4301,-215.8314C819.4529,-207.8771 814.6989,-198.369 810.3005,-189.5723"/>
+<polygon fill="#000000" stroke="#000000" points="813.3237,-187.7923 805.721,-180.4133 807.0627,-190.9228 813.3237,-187.7923"/>
+</g>
+<!-- module.services&#45;&gt;[root] topic (expand) -->
+<g id="edge14" class="edge">
+<title>module.services-&gt;[root] topic (expand)</title>
+<path fill="none" stroke="#000000" d="M841.5987,-215.8314C845.5759,-207.8771 850.3299,-198.369 854.7283,-189.5723"/>
+<polygon fill="#000000" stroke="#000000" points="857.9661,-190.9228 859.3078,-180.4133 851.7051,-187.7923 857.9661,-190.9228"/>
+</g>
+<!-- module.services&#45;&gt;[root] function_app (expand) -->
+<g id="edge15" class="edge">
+<title>module.services-&gt;[root] function_app (expand)</title>
+<path fill="none" stroke="#000000" d="M861.738,-217.3008C878.4814,-207.7331 899.7438,-195.5832 918.0717,-185.1101"/>
+<polygon fill="#000000" stroke="#000000" points="919.8547,-188.1224 926.8006,-180.1222 916.3817,-182.0447 919.8547,-188.1224"/>
+</g>
+<!-- module.services&#45;&gt;[root] web_app (expand) -->
+<g id="edge16" class="edge">
+<title>module.services-&gt;[root] web_app (expand)</title>
+<path fill="none" stroke="#000000" d="M882.2855,-220.7084C916.4979,-211.2003 963.065,-197.5303 1011.7449,-180.106"/>
+<polygon fill="#000000" stroke="#000000" points="1012.969,-183.3852 1021.1805,-176.6904 1010.5863,-176.8032 1012.969,-183.3852"/>
+</g>
+</g>
+</svg>
