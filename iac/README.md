@@ -40,9 +40,11 @@ This code is oriented around the *development* environment, but can be adapted t
 ## Results
 The code in this project allows us to deploy 26 resources on the Microsoft Azure Cloud Platform, including network, storage, a Kubernetes cluster and several services, in less than 10 minutes. At the same time, we can use features of Terraform to plan, document, replace and destroy the same resource setups.
 
-```diff
-- todo, add image of stuff on azure
-```
+![An image of the deployed Azure resources](docs/azuredev.png)  
+*The above image shows a collection of the resources deployed on Azure.*  
+
+![An image of the Kubernetes cluster deployed on Azure](docs/azurekubernetes.png)  
+*The above image shows the resources in the Kubernetes cluster in a secondary resource group.*
 
 ### Planned execution
 Terraform allows the developer to plan their execution with `terraform plan`, of which the output can be seen in [docs/terraformplan.json](./docs/terraformplan.json). This ensures the developer performs the exact infrastructure changes they expect.
