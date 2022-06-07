@@ -1,14 +1,14 @@
 # Software Development Bachelor Project
+This is the repository used during our Bachelor Project in Software Development. 
 
-Our Infrastructure as Code solution can be found here:
-- [Terraform IaC](https://github.com/Hold-Krykke-BA/Bachelor-Project/tree/main/iac)
-
-This repository wil be used as a kanban board during the concurrent phases:
+The repository has been used as a kanban board during the concurrent phases:
 - [Development phase](https://github.com/Hold-Krykke-BA/Bachelor-Project/projects/1) 
 - [Writing phase](https://github.com/Hold-Krykke-BA/Bachelor-Project/projects/2)  
 - [Presentation phase](https://github.com/Hold-Krykke-BA/Bachelor-Project/projects/3)
 
-The repositoty will additionally function as a container for the infrastructure configurations files. 
+## Infrastructure as Code with Terraform
+Our Infrastructure as Code solution can be found here:
+- [Terraform IaC](https://github.com/Hold-Krykke-BA/Bachelor-Project/tree/main/iac)
 
 ## Contributors
 - _[Rúni Vedel Niclasen - cph-rn118](https://github.com/Runi-VN)_
