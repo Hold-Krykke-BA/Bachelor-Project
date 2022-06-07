@@ -1,5 +1,8 @@
 # Software Development Bachelor Project
 
+Our Infrastructure as Code solution can be found here:
+- [Terraform IaC](https://github.com/Hold-Krykke-BA/Bachelor-Project/tree/main/iac)
+
 This repository wil be used as a kanban board during the concurrent phases:
 - [Development phase](https://github.com/Hold-Krykke-BA/Bachelor-Project/projects/1) 
 - [Writing phase](https://github.com/Hold-Krykke-BA/Bachelor-Project/projects/2)  
